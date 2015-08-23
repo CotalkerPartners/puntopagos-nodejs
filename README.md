@@ -9,6 +9,9 @@ npm install puntopagos-node
 ```javascript
 var puntoPagos = request('puntopagos-node');
 
+// Config
+puntoPagos.config('PUNTOPAGOS_KEY_CONFIG', 'PUNTOPAGOS_SECRET_CONFIG') 
+
 // Create payment
 puntoPagos.pay(puntoPagos.generateId(), amont, puntoPagos.paymentMethod.webpay, callback(err, data));
 // data = {token:token, redirect:redirect}
